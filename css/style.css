@@ -1,0 +1,59 @@
+:root {
+    --primary-bg: #056bbd;
+    --active-bg: #00faa7;
+    --bomb-bg: #ff0000;
+    --even-bg: #7FFFD4;
+}
+
+body {
+    background-color: var(--primary-bg);
+}
+
+#difficulty,
+#start-game {
+    min-width: 150px;
+    height: 40px;
+}
+
+#grid {
+    width: 900px;
+    height: 900px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid,
+.square {
+    border: 2px solid white;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    cursor: crosshair;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.square.medium-square {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.square.big-square {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.square.active {
+    background-color: var(--active-bg);
+    color: #333;
+}
+
+.square.bomb {
+    background-color: var(--bomb-bg);
+}
